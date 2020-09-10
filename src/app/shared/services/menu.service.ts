@@ -1,11 +1,17 @@
 import { Injectable } from '@angular/core';
 import { Opcion } from '../models/opcion.interface';
+import './../helper/helper';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MenuService {
+  restOfDayText : string = "";
+  today : string = '';
 
+
+
+  
   constructor() { }
 
 
@@ -13,6 +19,15 @@ export class MenuService {
     let mes = new Date().getMonth()
     return mes;
   }
+
+  
+getTodayOptions() : Opcion[]{
+  let opciones : Opcion[];
+  
+  //this.getMenuPrincipal.suscribe( menu =>{})
+  return opciones;
+}
+ 
 
   getMenuPrincipal() : Opcion[] {
 
@@ -104,6 +119,11 @@ export class MenuService {
       { dia: 'S', descripcion : 'Crema de chocolate sin azúcar'},
       { dia: 'D', descripcion : 'Fruta de estación'},
     ]
+  }
+
+
+  getTreeOptions(){
+
   }
 
 }

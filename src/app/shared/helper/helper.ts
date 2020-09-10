@@ -13,3 +13,15 @@ export function getMonthName() : string{
     var monthName = months[m.getMonth()];
     return monthName;
     }
+
+export function getTodayDayOfWeekLeter() : string{
+    var days = ['D', 'L', 'M', 'X', 'J', 'V', 'S'];
+    var d = new Date();
+    var dayName = days[d.getDay()];
+    return dayName;
+    }
+
+export function getTodayDayOfMonth() : number{
+    var d = new Date();
+    return d.getDay();
+}
