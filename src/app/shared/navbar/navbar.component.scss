@@ -1,0 +1,20 @@
+.navbarmenu{
+  background-color: #208928;
+  margin: auto;
+  .colored-column-basic{
+    margin-top:0;
+  }
+
+}
+
+:host{
+  @media (max-width: 991.98px){
+nb-layout .layout .layout-container .content .columns nb-layout-column {
+    padding: 0;
+}
+}}
+nav {
+  justify-content: center;
+  margin: auto;
+}
+

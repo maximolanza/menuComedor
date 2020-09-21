@@ -1,15 +1,19 @@
-<nb-layout>
-    <nb-layout-header fixed>Menú del comedor de funcionarios
-    </nb-layout-header>
-<nb-layout-column class="colored-column-basic">
-<app-today></app-today>
+<nb-layout class="navbarmenu center">
+  <nb-layout-header fixed class="navbarmenu center">
+    <b class="marginauto">Menú del comedor de funcionarios </b>
+    <br>
+    <app-today class="marginauto"></app-today>
+  </nb-layout-header>
 
-          <div class="container">
-            
-            <app-opciones-del-dia></app-opciones-del-dia>
-           
+  <nb-layout-column class="colored-column-basic">
 
-            <app-lista-opciones></app-lista-opciones>
-          </div>
-        </nb-layout-column>
-      </nb-layout>
+
+    <div class="container">
+
+      <app-opciones-del-dia></app-opciones-del-dia>
+
+
+      <app-lista-opciones></app-lista-opciones>
+    </div>
+  </nb-layout-column>
+</nb-layout>

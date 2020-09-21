@@ -1,35 +1,74 @@
+import { MainOption } from './../models/mainOption.interface';
 import { Injectable } from '@angular/core';
 import { Opcion } from '../models/opcion.interface';
+import { OpcionSemana } from '../models/opcionSemana.interface';
 import './../helper/helper';
+import { getTodayDayOfMonth, getTodayDayOfWeekLeter } from './../helper/helper';
+import { NbChatMessageFileIconPreview } from '@nebular/theme';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MenuService {
-  restOfDayText : string = "";
-  today : string = '';
+  restOfDayText = '';
+  today = '';
+
+  opciones: MainOption[] = [];
+   mainPrincipal: MainOption = { tipo: '', descripcion: ''};
+   mainEnsalada: MainOption = { tipo: '', descripcion: ''};
+   mainLight: MainOption = { tipo: '', descripcion: ''};
+
+   opcionesSweet: MainOption[] = [];
+   mainSweetPrincipal = { tipo: '', descripcion: ''};
+   mainSweetLight = { tipo: '', descripcion: ''};
 
 
 
-  
+
+
   constructor() { }
 
 
-  getMes() : number {
-    let mes = new Date().getMonth()
+  getMes(): number {
+    const mes = new Date().getMonth();
     return mes;
   }
 
-  
-getTodayOptions() : Opcion[]{
-  let opciones : Opcion[];
-  
-  //this.getMenuPrincipal.suscribe( menu =>{})
-  return opciones;
-}
- 
 
-  getMenuPrincipal() : Opcion[] {
+getTodayPrincipalOption(): Opcion{
+  let opciones: Opcion[];
+  opciones = this.getMenuPrincipal();
+
+  console.log(getTodayDayOfMonth());
+  return opciones.filter(opcion  => opcion.dia === getTodayDayOfMonth())[0];
+}
+
+getTodayEnsaladaOption(): OpcionSemana{
+  let opciones: OpcionSemana[];
+  opciones = this.getMenuEnsalada();
+  return opciones.filter(opcion  => opcion.dia ===  getTodayDayOfWeekLeter())[0];
+}
+
+getTodayLightOption(): OpcionSemana{
+  let opciones: OpcionSemana[];
+  opciones = this.getMenuLight();
+  return opciones.filter(opcion  => opcion.dia === getTodayDayOfWeekLeter())[0];
+}
+
+
+getTodayLightSweetOption(): OpcionSemana{
+  let opciones: OpcionSemana[];
+  opciones = this.getPostreLight();
+  return opciones.filter(opcion  => opcion.dia === getTodayDayOfWeekLeter())[0];
+}
+
+getTodayPrincipalSweetOption(): OpcionSemana{
+  let opciones: OpcionSemana[];
+  opciones = this.getPostrePrincipal();
+  return opciones.filter(opcion  => opcion.dia === getTodayDayOfWeekLeter())[0];
+}
+
+  getMenuPrincipal(): Opcion[] {
 
     return [
       { dia: 1, descripcion: 'Tarta de jamón, puerros y tomates'},
@@ -61,14 +100,14 @@ getTodayOptions() : Opcion[]{
     { dia: 27, descripcion: 'Tarta de jamón y choclo'},
     { dia: 28, descripcion: 'Suprema de pollo, acompañada de salsa de puerros y arroz con azafrán'},
     { dia: 29, descripcion: 'Tarta de jamón, puerros y tomates'},
-    { dia: 30, descripcion: 'Carré de cerdo relleno salado con puré de papas'},
-  ]
+    { dia: 30, descripcion: 'Carré de cerdo relleno salado con puré de papas'}
+  ];
   }
 
 
   getMenuEnsalada(){
-
-    return [
+    let opciones: OpcionSemana[];
+    opciones = [
       { dia: 'L', descripcion: 'Atún español, arroz, huevo duro, tomates, zanahorias y lechuga' },
       { dia: 'M', descripcion: 'Ensalada de hojas verdes, lascas de parmesano, suprema de pollo grille y zuchini. Aderezo de aceite, vinagre de manzana, sal y pimienta' },
       { dia: 'X', descripcion: 'Tortilla de papas clásica con ensalada de tomates y cebolla' },
@@ -76,25 +115,28 @@ getTodayOptions() : Opcion[]{
       { dia: 'V', descripcion: 'Spaguettis caprese' },
       { dia: 'S', descripcion: 'Ensalada de papines, huevo duro, zanahorias, choclo, cherrys y pepinos' },
       { dia: 'D', descripcion: 'Ensalada de lomito, choclo, lechuga, zanahorias y tomate. Aderezo salsa golf' },
-    ]
+    ];
+    return opciones;
   }
 
 
   getMenuLight(){
 
-    return [
+    let opciones: OpcionSemana[];
+    opciones = [
       { dia: 'L', descripcion: 'Pescado al horno con puré de zanahoria y calabacín' },
-      { dia: 'M', descripcion: '' },
-      { dia: 'X', descripcion: '' },
-      { dia: 'J', descripcion: '' },
-      { dia: 'V', descripcion: '' },
-      { dia: 'S', descripcion: '' },
-      { dia: 'D', descripcion: '' },
-    ]
+      { dia: 'M', descripcion: 'Spaguettis integrales con vegetales al wok' },
+      { dia: 'X', descripcion: 'Pechuga de pollo deshuesado sin piel con puré de zapallo' },
+      { dia: 'J', descripcion: 'Pastel de zapallitos y carne, con graten de salsa blanca y queso magre sin sal' },
+      { dia: 'V', descripcion: 'Churrasco desgrasado con ensalada de lechuga, tomate y zanahoria rallada' },
+      { dia: 'S', descripcion: 'Souffle de calabaza, zanahoria y brocolli' },
+      { dia: 'D', descripcion: 'Milanesas de calabaza y berenjen al horno acompañada de arroz integral' },
+    ];
+    return opciones;
   }
 
 
-  getPostre(){
+  getPostrePrincipal(){
 
     return [
       { dia: 'L', descripcion: 'Fruta de estación'},
@@ -104,8 +146,7 @@ getTodayOptions() : Opcion[]{
       { dia: 'V', descripcion : 'Fruta de estación'},
       { dia: 'S', descripcion : 'Crema de chocolate'},
       { dia: 'D', descripcion : 'Helado mixto de frutilla y chocolate'},
-     
-    ]
+    ];
   }
 
   getPostreLight(){
@@ -118,13 +159,52 @@ getTodayOptions() : Opcion[]{
       { dia: 'V', descripcion : 'Fruta de estación'},
       { dia: 'S', descripcion : 'Crema de chocolate sin azúcar'},
       { dia: 'D', descripcion : 'Fruta de estación'},
-    ]
+    ];
   }
 
 
-  getTreeOptions(){
+  getTreeOptions(): MainOption[]{
 
-  }
+    const principal = this.getTodayPrincipalOption().descripcion;
+    const ensalada = this.getTodayEnsaladaOption().descripcion;
+    const light = this.getTodayLightOption().descripcion;
 
+
+
+    this.mainEnsalada.descripcion = ensalada;
+    this.mainEnsalada.tipo = 'Ensalada';
+    this.mainPrincipal.descripcion = principal;
+    this.mainPrincipal.tipo = 'Principal';
+    this.mainLight.descripcion = light;
+    this.mainLight.tipo = 'Light';
+
+    this.opciones.push( this.mainEnsalada );
+    this.opciones.push( this.mainPrincipal );
+    this.opciones.push( this.mainLight );
+
+
+    return this.opciones;
 }
 
+
+
+
+getSweetOptions(): MainOption[]{
+
+  const postrePrincipal = this.getTodayPrincipalSweetOption().descripcion;
+  const postreLight = this.getTodayLightSweetOption().descripcion;
+
+
+  this.mainSweetPrincipal.descripcion = postrePrincipal;
+  this.mainSweetPrincipal.tipo = 'Principal';
+  this.mainSweetLight.descripcion = postreLight;
+  this.mainSweetLight.tipo = 'Light';
+
+
+  this.opcionesSweet.push( this.mainSweetPrincipal );
+  this.opcionesSweet.push (this.mainSweetLight );
+
+
+  return this.opcionesSweet;
+}
+}

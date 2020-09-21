@@ -1,32 +1,22 @@
-<div class="card-row">
-    <div class="card-col">
-        
-        <app-card> </app-card>
-    </div>
-    <div class="card-col">
-        <app-card></app-card>
-    </div>
-    <div class="card-col">
-        <app-card></app-card>
-    </div>
-    <!--
-    <nb-layout-column><app-card></app-card></nb-layout-column>
-    <nb-layout-column><app-card></app-card></nb-layout-column>
-    <nb-layout-column><app-card></app-card></nb-layout-column>
-  -->
+<div class="card-row rowContainerOpciones">
+  <div *ngFor="let mainOption of mainOptions" class="card-col zoomeable">
+    <app-opcion-del-dia-card class="flexitem" [tipo]=mainOption.tipo [descripcion]=mainOption.descripcion>
+    </app-opcion-del-dia-card>
+  </div>
 </div>
 
-<div class="card-row">
-    <div class="card-col">
-        <app-card> </app-card>
+<div class="card-row centered">
+  <div class="card-row postres centered rowContainerOpciones">
+    <div *ngFor="let mainSweetOption of mainSweetOptions" class=" card-col zoomeable">
+
+      <app-opcion-del-dia-card class="flexitem opcionCard " [tipo]=mainSweetOption.tipo
+        [descripcion]=mainSweetOption.descripcion> </app-opcion-del-dia-card>
     </div>
-    <div class="card-col">
-        <app-card></app-card>
-    </div>
-  
+
     <!--
     <nb-layout-column><app-card></app-card></nb-layout-column>
     <nb-layout-column><app-card></app-card></nb-layout-column>
     <nb-layout-column><app-card></app-card></nb-layout-column>
   -->
+  </div>
 </div>

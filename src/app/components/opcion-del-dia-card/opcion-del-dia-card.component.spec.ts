@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { OpcionesComponent } from './opciones.component';
+import { OpcionDelDiaCardComponent } from './opcion-del-dia-card.component';
 
-describe('OpcionesComponent', () => {
-  let component: OpcionesComponent;
-  let fixture: ComponentFixture<OpcionesComponent>;
+describe('OpcionDelDiaCardComponent', () => {
+  let component: OpcionDelDiaCardComponent;
+  let fixture: ComponentFixture<OpcionDelDiaCardComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ OpcionesComponent ]
+      declarations: [ OpcionDelDiaCardComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(OpcionesComponent);
+    fixture = TestBed.createComponent(OpcionDelDiaCardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,15 +1,22 @@
-<div class="row">
-    <div class="card-col">
-          <nb-card size="small">
+
+
+          <nb-card size="medium">
+            <nb-card-header>
+              Menú Principal
+            </nb-card-header>
             <nb-list>
               <nb-list-item *ngFor="let opcion of menuPrincipal">
-               <h5 style="margin-right: 20px;">{{opcion.dia}}</h5>     {{opcion.descripcion}}
+                <app-item
+                  [dia] = opcion.dia
+                  [descripcion] = opcion.descripcion
+                >
+                </app-item>
+
               </nb-list-item>
             </nb-list>
           </nb-card>
-          
-</div>
 
-</div>
-      
-    
+
+
+
+

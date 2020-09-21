@@ -4,5 +4,37 @@
     //max-height: 25rem;
     overflow-x: hidden;
     overflow-y: auto;
-   
+
   }
+
+  .rowContainerOpciones{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding:30px 30px 10px 30px;
+
+  }
+
+
+
+
+//[className]=" mainOption.tipo == 'Principal' ? 'card-col zoomeable' : 'card-col zoomeable'"
+  .postres{
+    min-width: 60%;
+    justify-content: space-between;
+
+  }
+
+
+.centered{
+  justify-content: center;
+  align-items: center;
+
+}
+.flexSpace{
+  display: flex;
+  justify-content: space-between;
+}
+
+

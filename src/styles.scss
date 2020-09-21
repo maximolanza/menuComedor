@@ -6,6 +6,24 @@
   @include nb-theme-global();
 };
 /* You can add global styles to this file, and also import other style files */
+
+
+.layout-bg {
+  background: linear-gradient(90deg, rgba(129,255,82,1) 0%, rgba(181,255,153,1) 55%, rgba(255,255,255,1) 100%)
+}
+
+.nb-theme-default {
+  background: linear-gradient(90deg, rgba(129,255,82,1) 0%, rgba(181,255,153,1) 55%, rgba(255,255,255,1) 100%)
+}
+/*
+:host {
+
+  //background-color: nb-theme(background-basic-color-1);
+  background: rgb(129,255,82);
+  background-color: linear-gradient(90deg, rgba(129,255,82,1) 0%, rgba(181,255,153,1) 55%, rgba(255,255,255,1) 100%);
+}
+*/
+
 .card-row {
   display: flex;
   margin: 0 -0.5rem;
@@ -19,10 +37,31 @@
 
 .center{
   justify-content: center;
- 
+
 }
 
 .marginauto{
   margin:auto;
 }
+
+.zoomeable{
+  transition: all .3s linear;
+  //position: relative;
+  //z-index: 1;
+}
+
+
+.zoomeable:hover{
+  transform: scale(1.05, 1.05);
+  transition: all .3s linear;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.center{
+  justify-content: center;
+  text-align: center;
+}
+
+$colorPrincipal : #208928;
 

@@ -21,7 +21,9 @@ export function getTodayDayOfWeekLeter() : string{
     return dayName;
     }
 
+
+
 export function getTodayDayOfMonth() : number{
     var d = new Date();
-    return d.getDay();
+    return d.getDate();
 }

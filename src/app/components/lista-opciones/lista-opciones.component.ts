@@ -11,9 +11,10 @@ export class ListaOpcionesComponent implements OnInit {
   menuPrincipal : Opcion[];
   constructor( private menuService : MenuService) {
       this.menuPrincipal = menuService.getMenuPrincipal();
+
    }
-  
- 
+
+
 
   ngOnInit(): void {
   }

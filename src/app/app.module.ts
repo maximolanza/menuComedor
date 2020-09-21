@@ -1,3 +1,4 @@
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -7,24 +8,22 @@ import { NbThemeModule, NbLayoutModule, NbCardModule, NbCardComponent, NbLayoutC
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { AppRoutingModule } from './app-routing.module';
 import { ItemComponent } from './components/item/item.component';
-import { CardComponent } from './components/card/card.component';
 import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { OpcionesDelDiaComponent } from './components/opciones-del-dia/opciones-del-dia.component';
 import { ListaOpcionesComponent } from './components/lista-opciones/lista-opciones.component';
-import { OpcionesComponent } from './components/opciones/opciones.component';
 import { TodayComponent } from './components/today/today.component';
 import { MenuService } from './shared/services/menu.service';
+import { OpcionDelDiaCardComponent } from './components/opcion-del-dia-card/opcion-del-dia-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ItemComponent,
-    CardComponent,
     NavbarComponent,
     OpcionesDelDiaComponent,
+    OpcionDelDiaCardComponent,
     ListaOpcionesComponent,
-    OpcionesComponent,
     TodayComponent
   ],
   imports: [
