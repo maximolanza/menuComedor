@@ -9,18 +9,20 @@
 
 
 .layout-bg {
-  background: linear-gradient(90deg, rgba(129,255,82,1) 0%, rgba(181,255,153,1) 55%, rgba(255,255,255,1) 100%)
+  background-color: rgb(60, 37, 191);
 }
 
 .nb-theme-default {
-  background: linear-gradient(90deg, rgba(129,255,82,1) 0%, rgba(181,255,153,1) 55%, rgba(255,255,255,1) 100%)
+  background-color: rgb(144, 35, 35);
 }
 /*
 :host {
+background-color: nb-theme(background-basic-color-1);
+//color: nb--theme(header-text-color);
 
   //background-color: nb-theme(background-basic-color-1);
   background: rgb(129,255,82);
-  background-color: linear-gradient(90deg, rgba(129,255,82,1) 0%, rgba(181,255,153,1) 55%, rgba(255,255,255,1) 100%);
+  background-color: dimgrey;
 }
 */
 
