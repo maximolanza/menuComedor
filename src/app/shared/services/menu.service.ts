@@ -6,6 +6,18 @@ import './../helper/helper';
 import { getTodayDayOfMonth, getTodayDayOfWeekLeter } from './../helper/helper';
 import { NbChatMessageFileIconPreview } from '@nebular/theme';
 
+
+
+
+//import { Http, Response, Headers, RequestOptions } from '@angular/http';
+import {HttpClientModule} from '@angular/common/http'
+import {HttpClient} from '@angular/common/http'
+import {Observable} from 'rxjs';
+//import { map } from 'rxjs/operators';
+//import 'rxjs/add/operator/map';
+//import 'rxjs/Rx';
+import { map, filter, switchMap, catchError } from 'rxjs/operators';.
+import 'rxjs/add/operator/catch';
 @Injectable({
   providedIn: 'root'
 })
@@ -23,10 +35,13 @@ export class MenuService {
    mainSweetLight = { tipo: '', descripcion: ''};
 
 
+   private _jsonURL = 'assets/fakeBackEnd/';
 
 
 
-  constructor() { }
+  constructor(private http: HttpClient) {
+    var object;
+    this.getJSON().subscribe(data => object=data, error => console.log(error)); }
 
 
   getMes(): number {
@@ -207,5 +222,20 @@ getSweetOptions(): MainOption[]{
 
 
   return this.opcionesSweet;
+}
+
+
+
+
+
+
+
+
+public getJSON(): Observable<any> {
+  let mes = this.getMes();
+
+  return this.http.get(this._jsonURL+mes.toString()+'.json').pipe(map((response:any) => response.json()).pipe(
+   catchError(error => console.log(error); return error));
+
 }
 }
