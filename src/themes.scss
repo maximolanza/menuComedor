@@ -6,10 +6,12 @@ $nb-enable-css-custom-properties: true;
 $nb-themes: nb-register-theme((
 
   // add your variables here like:
- background-basic-color-1: #1c7625//rgb(64, 64, 64)
+ background-basic-color-1: #1c6376//rgb(64, 64, 64),
+
  ,
-  //layout-background-color : #8d93ab,
+  layout-background-color : #b8b8b8,
   header-text-color: white,
+  card-background-color: rgb(226, 226, 226)
    //color-primary-100: #8d93ab,
   // color-primary-200: #d9e4ff,
   // color-primary-300: #a6c1ff,

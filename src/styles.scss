@@ -14,6 +14,7 @@
 
 .nb-theme-default {
   background-color: rgb(144, 35, 35);
+  border: none;
 }
 /*
 :host {
@@ -65,5 +66,12 @@ background-color: nb-theme(background-basic-color-1);
   text-align: center;
 }
 
-$colorPrincipal : #208928;
+$colorPrincipal : #8997a9;
 
+
+
+
+
+.navbarmenu{
+  background-color:#135319;//#208928;
+}

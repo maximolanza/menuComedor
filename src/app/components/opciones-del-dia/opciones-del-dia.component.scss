@@ -8,7 +8,6 @@
   }
 
   .rowContainerOpciones{
-
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -21,7 +20,7 @@
 
 //[className]=" mainOption.tipo == 'Principal' ? 'card-col zoomeable' : 'card-col zoomeable'"
   .postres{
-    min-width: 60%;
+    min-width: 70%;
     justify-content: space-between;
 
   }
