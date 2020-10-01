@@ -2,7 +2,7 @@
     "menu": {
       "mes": "09",
       "año": "2020",
-      "menuPricipal": [
+      "menuPrincipal": [
         { "dia": 1, "descripcion": "Tarta de jamón, puerros y tomates"},
     { "dia": 2, "descripcion": "Carré de cerdo relleno salado con puré de papas"},
     { "dia": 3, "descripcion": "Ravioles de muzarella, lomito y parmesano con salsa capresse"},
@@ -42,9 +42,9 @@
         { "dia": "V", "descripcion": "Spaguettis caprese" },
         { "dia": "S", "descripcion": "Ensalada de papines, huevo duro, zanahorias, choclo, cherrys y pepinos" },
         { "dia": "D", "descripcion": "Ensalada de lomito, choclo, lechuga, zanahorias y tomate. Aderezo salsa golf" }
-     
+
       ],
-      "menuLight": [ 
+      "menuLight": [
           { "dia": "L", "descripcion": "Pescado al horno con puré de zanahoria y calabacín" },
         { "dia": "M", "descripcion": "Spaguettis integrales con vegetales al wok" },
         { "dia": "X", "descripcion": "Pechuga de pollo deshuesado sin piel con puré de zapallo" },
@@ -74,4 +74,3 @@
     }
   }
 
-   

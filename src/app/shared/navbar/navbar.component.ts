@@ -7,18 +7,16 @@ import { Opcion } from '../models/opcion.interface';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-  menuPrincipal : Opcion[];
-  menuEnsalada : Opcion[];
-  menuLight : Opcion[];
-  postreComun : Opcion[];
-  postreLight : Opcion[];
+  menuPrincipal: Opcion[];
+  menuEnsalada: Opcion[];
+  menuLight: Opcion[];
+  postreComun: Opcion[];
+  postreLight: Opcion[];
 
-  constructor(menuService : MenuService) {
-    this.menuPrincipal = menuService.getMenuPrincipal();
-   }
+  constructor() {   }
 
   ngOnInit(): void {
-   
+
   }
 
 }

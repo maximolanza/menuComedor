@@ -12,9 +12,8 @@ export class OpcionesDelDiaComponent implements OnInit {
   mainSweetOptions: MainOption[];
 
   constructor( menuService: MenuService) {
-    this.mainOptions = menuService.getTreeOptions();
+    this.mainOptions = menuService.getThreeOptions();
     this.mainSweetOptions = menuService.getSweetOptions();
-
   }
 
   ngOnInit(): void {

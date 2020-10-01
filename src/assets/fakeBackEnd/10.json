@@ -5,7 +5,7 @@
     "menu": {
       "mes": "10",
       "año": "2020",
-      "menuPricipal": [
+      "menuPrincipal": [
         { "dia": 1, "descripcion": "Ravioles de muzarella, lomito y parmesano con salsa de tomates y albahaca"},
         { "dia": 2, "descripcion": "Milanesa de pollo con puré de papas y perejil"},
         { "dia": 3, "descripcion": "Pescado al horno con papas noisette"},
@@ -46,7 +46,7 @@
         { "dia": "V", "descripcion": "Spaguettis caprese" },
         { "dia": "S", "descripcion": "Ensalada 100% vegetariana: hojas de lechuga crespa y mora, cous cous,pasas de arándanos rojos, maní tostado, rúcula, queso parmesano, vinagreta de rúcula, zanahoria y pepinos" },
         { "dia": "D", "descripcion": "Ensalada de lomito, choclo, lechuga, zanahorias y tomate. Aderezo salsa golf" }
-     
+
       ],
       "menuLight": [{ "dia": "L", "descripcion": "Pescado al horno con puré de zanahoria y calabacín" },
         { "dia": "M", "descripcion": "Spaguettis integrales con vegetales al wok" },

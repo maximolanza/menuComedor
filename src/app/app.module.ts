@@ -1,3 +1,4 @@
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -49,9 +50,10 @@ import { OpcionDelDiaCardComponent } from './components/opcion-del-dia-card/opci
     NbListModule,
     NbToastrModule.forRoot(),
     NbUserModule,
-    NbSpinnerModule
+    NbSpinnerModule,
+    HttpClientModule
   ],
-  providers: [MenuService],
+  providers: [MenuService, HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
